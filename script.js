@@ -41,20 +41,38 @@ END
 // Skriv din pseudokod innanför nedanstående kommentarsblock
 /*
 
-function play()
-    SET variabel ordbok = [..., ..., ...]; // Innehåller ALLA ord i det engelska språket
-    SET variabel startOrd till "FOUR";
-    SET variabel slutordOrd till "FIVE";
+funktion play
 
-    
-end function
+set variabel ORDBOK = (alla ord i det engelska lexikonet)
 
-function isOneLetterApart(wordOne, wordTwo)
-    SET variabel diffCount till 0;
+set variabel startord = "FOUR"
+
+set variabel slutord = "FIVE"
+
+// Loopa tills spelaren har rätt ord
+MEDANS startordet inte är lika med slutordet
+
+    PRINT "Skriv ett ord som skiljer ett tecken från startordet för att komma ett steg närmare slutordet: "
+    INPUT nyttORD
+     om nyttORD = startord
+     PRINT "Du skrev samma ord som startordet, försök igen"
+     om nyttORD = slutord
+     PRINT "Grattis du klarade det"
+     om nyttORD inte finns i ORDBOK
+      PRINT "Ordet finns inte i ordboken, försök igen"
+     om nyttORD finns i ORDBOK och skiljer sig med ETT tecken från startordet
+        ersätt startord med nyttORD
+        PRINT "Du är nu ett steg närmare slutordet"
+
+        WORK IN PROGRESS
 
 
-    return diffCount === 1; // returnerar sant om endast en bokstav ändrats, annars falskt
-end function
+
+
+ 
+
+
+
 
 
 
