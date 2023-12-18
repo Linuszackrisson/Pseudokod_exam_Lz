@@ -46,7 +46,7 @@ function play()
     SET variabel startOrd till "FOUR";
     SET variabel slutordOrd till "FIVE";
 
-
+    
 end function
 
 function isOneLetterApart(wordOne, wordTwo)
@@ -55,5 +55,7 @@ function isOneLetterApart(wordOne, wordTwo)
 
     return diffCount === 1; // returnerar sant om endast en bokstav ändrats, annars falskt
 end function
+
+
 
 */
