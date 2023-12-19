@@ -41,33 +41,26 @@ END
 // Skriv din pseudokod innanför nedanstående kommentarsblock
 /*
 
-funktion play
 
-set variabel ORDBOK = (alla ord i det engelska lexikonet)
+// FÖRSÖK TVÅ FAST SUPERFÖRENKLAT
 
-set variabel startord = "FOUR"
+START
+Set variabel startord = "FOUR"
+Set variabel slutord = "FIVE"
+Set variabel nyttOrd = ""
 
-set variabel slutord = "FIVE"
-
-// Loopa tills spelaren har rätt ord
-MEDANS startordet inte är lika med slutordet
-
-    PRINT "Skriv ett ord som skiljer ett tecken från startordet för att komma ett steg närmare slutordet: "
-    INPUT nyttORD
-     om nyttORD = startord
-     PRINT "Du skrev samma ord som startordet, försök igen"
-     om nyttORD = slutord
-     PRINT "Grattis du klarade det"
-     om nyttORD inte finns i ORDBOK
-      PRINT "Ordet finns inte i ordboken, försök igen"
-     om nyttORD finns i ORDBOK och skiljer sig med ETT tecken från startordet
-        ersätt startord med nyttORD
-        PRINT "Du är nu ett steg närmare slutordet"
-
-        WORK IN PROGRESS
-
-
-
+LOOPA TILLS startord = slutord
+    Uppmana användaren att mata in ett ord som skiljer sig med ett tecken från startordet
+    INMATNING nyttOrd
+    
+    OM nyttOrd = startord, återgå till början av loopen
+    OM nyttOrd = slutord, avsluta loopen och skriv ut grattis
+    OM nyttOrd inte finns i ordboken, skriv ut att ordet inte finns i ordboken
+    ANNARS OM längden av (nyttOrd minus startord) != 1, skriv ut att endast ett tecken ska ändras
+    ANNARS OM antal olika tecken mellan nyttOrd och startord != 1, skriv ut att endast ett tecken ska ändras
+    ANNARS
+        ersätt startord med nyttOrd och skriv ut att du är ett steg närmare slutordet
+END
 
  
 
