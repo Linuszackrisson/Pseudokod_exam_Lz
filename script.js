@@ -50,16 +50,22 @@ Set variabel slutord = "FIVE"
 Set variabel nyttOrd = ""
 
 LOOPA TILLS startord = slutord
+    Skriv ut startord ""
     Uppmana användaren att mata in ett ord som skiljer sig med ett tecken från startordet
     INMATNING nyttOrd
     
-    OM nyttOrd = startord, återgå till början av loopen
-    OM nyttOrd = slutord, avsluta loopen och skriv ut grattis
-    OM nyttOrd inte finns i ordboken, skriv ut att ordet inte finns i ordboken
-    ANNARS OM längden av (nyttOrd minus startord) != 1, skriv ut att endast ett tecken ska ändras
-    ANNARS OM antal olika tecken mellan nyttOrd och startord != 1, skriv ut att endast ett tecken ska ändras
+    OM nyttOrd = startord
+        återgå till början av loopen
+    OM nyttOrd inte finns i ordboken
+        skriv ut att ordet inte finns i ordboken
+    ANNARS OM längden av (nyttOrd minus startord) != 0
+        skriv ut att endast ett tecken ska ändras
+    ANNARS OM antal olika tecken mellan nyttOrd och startord != 1
+        skriv ut att endast ett tecken ska ändras
     ANNARS
         ersätt startord med nyttOrd och skriv ut att du är ett steg närmare slutordet
+END LOOP  
+skriv ut grattis du har klarat det
 END
 
  
